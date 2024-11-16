@@ -1,0 +1,367 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background: #ffffff;
+    color: #333;
+    padding: 1.5em 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+header .logo h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #555;
+}
+
+nav {
+    background: #eaeaea;
+    padding: 0.5em 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+nav ul li a {
+    color: #333;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 0.5em 1em;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: #d6d6d6;
+    border-radius: 5px;
+    color: #000;
+}
+
+footer {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+footer section {
+    flex: 1;
+    padding: 0 20px;
+    border-right: 1px solid #ccc;
+    transition: transform 0.3s ease;
+}
+
+footer section:last-child {
+    border-right: none;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#copyright {
+    padding-top: 20px;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+#vision h2, #gallery h2 {
+    text-align: center;
+    margin: 10px auto;
+}
+
+#vision p {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 20em;
+}
+
+#about {
+    padding: 2em 1em;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2em;
+}
+
+#about h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 2em;
+    color: #333;
+}
+
+#about .owner-image {
+    display: block;
+    margin: 1em auto;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#about p {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 1em 0;
+    color: #555;
+}
+
+#about .owner-details {
+    margin-bottom: 1.5em;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#about .owner-details h3 {
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+    color: #007bff;
+}
+
+#about .owner-details p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.6;
+}
+body.dark-mode #about {
+    background-color: #444;
+    color: #ccc;
+}
+
+body.dark-mode #about h2 {
+    color: #fff;
+}
+
+body.dark-mode #about .owner-image {
+    border: 5px solid #555;
+}
+
+body.dark-mode #about .owner-details {
+    background-color: #555;
+    color: #ccc;
+}
+
+body.dark-mode #about .owner-details h3 {
+    color: #007bff;
+}
+
+body.dark-mode #about .owner-details p {
+    color: #ccc;
+}
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#backToTop:hover {
+    background-color: #555;
+}
+
+#backToTop.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1em;
+    margin: 2em auto;
+    max-width: 1000px;
+    padding: 0 1em;
+}
+
+.product {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.product .details {
+    padding: 1em;
+    text-align: left;
+}
+
+.product .details h3 {
+    margin: 0 0 0.5em;
+    color: #333;
+}
+
+.product .details p {
+    margin: 0.5em 0;
+    color: #666;
+}
+
+.product .details strong {
+    color: #000;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button#themeToggle {
+    padding: 10px 20px;
+    border: none;
+    background-color: #3a3d41;
+    color: white;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+button#themeToggle:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+}
+
+button#themeToggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(221, 223, 224, 0.5);
+}
+
+button#themeToggle.dark-mode {
+    background-color: #444;
+    color: #ccc;
+}
+
+button#themeToggle.dark-mode:hover {
+    background-color: #333;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+nav.dark-mode {
+    background-color: #555;
+}
+
+footer.dark-mode {
+    background-color: #444;
+    color: #ccc;
+}
+
+header.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+header.dark-mode .logo h1 {
+    color: #ccc;
+}
+
+header.dark-mode .logo img {
+    filter: brightness(0.8);
+}
+
+body.dark-mode .product {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+body.dark-mode .product h3 {
+    color: white;
+}
+#greeting {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 1em 0;
+    color: #555;
+}
