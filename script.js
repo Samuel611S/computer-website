@@ -56,13 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
 function toggleModal() {
     const modal = document.querySelector('.owner-modal');
     const container = document.querySelector('.owner-container');
-    
-    // Toggle the modal visibility and a "clicked" class on the container
+
     modal.style.display = (modal.style.display === "block") ? "none" : "block";
     modal.style.opacity = (modal.style.display === "block") ? "1" : "0";
     modal.style.visibility = (modal.style.display === "block") ? "visible" : "hidden";
     
-    // Optional: Add a zoom effect to the image when clicked
     container.classList.toggle('clicked');
 }
 
